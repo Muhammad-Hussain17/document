@@ -1,0 +1,87 @@
+Clone & Status
+
+CLone - Cloning a repository on our local machine
+         remote                    local
+       [github]   		[laptop, PC]
+how to copy from github to personal laptop, pc {  git clone <-some link->  }
+
+----------------------------------------------------------------------------------------------------------
+
+cd   (change directory)   jab kisi folder ka ander jana ho bahar sy ander ka folder main 
+cd and folder name in terminal
+cd .. if want to come out from folder
+
+ls   (list files)
+ls -a  for hidden files  all files  {  or ls -hidden  }
+
+
+----------------------------------------------------------------------------------------------------------
+
+STATUS - displays the status of the code
+	git status
+hamray code ka sattus btati hy
+
+----------------------------------------------------------------------------------------------------------
+
+ADD & COMMIT
+
+add - adds new or changed files in your working directory to the Git staging area
+	git add <- file name ->
+
+commit - it is the record of change
+	git commit-m "some message"
+if we want to show what we change like add new buttion ex: git commit -m "add new para
+
+---------------------------------------------------------------------------------------------------------
+
+PUSH Command
+
+push -upload local repo content to remote repo
+	git push origin main
+ya local pc ya laptop ka changes githib tak dhaka dy day tay hain 
+
+
+-----------------------------------------------------------------------
+
+Pull Command
+
+	git pull origin main
+
+used to fetch and download content from a remote repo and immediately update the local repo to match that
+content
+
+
+----------------------------------------------------------------------------------------------------------
+
+
+INIT Command
+
+init - used to create a new git repo
+
+	git init
+	git remote add origin <-link->
+	git remote -v (to verify remote)
+	git branch    (to check branch)
+	git branch -M main (to rename branch)
+	git push origin main
+if we want to push code on same repo then type {	git push -u origin main	}
+
+
+----------------------------------------------------------------------------------------------------------
+
+
+BRANCH Commands
+
+	git branch	(to check branch)
+	git branch -M main (to rename branch)
+	git checkout <- branch name ->	(to navigate)   { ek branch sy dosri branch main janay ka lia }
+	git checkout -b <- new branch name ->	(to create new branch)
+	git branch -d <- branch name ->	(to delete branch)
+
+Merging Code
+
+Way 1
+	git diff <- branch name ->	(to compare commits, branches, files & more)
+	git merge <- branch name ->	(to merge 2 branches)
+Way 2
+Create a PR

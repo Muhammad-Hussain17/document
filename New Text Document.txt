@@ -1,0 +1,53 @@
+virtualenv env
+env script activate.ps1
+
+
+python -m django startproject mysite   //in terminal or powershell
+
+python manage.py runserver
+
+python manage.py
+python manage.py startapp home
+
+python manage.py makemigrations   // create changes and store in a file
+python manage.py migrate          // apply the pending changes created by makemigrations
+
+python manage.py createsuperuser  //First we’ll need to create a user who can login to the admin site. Run the following command
+
+
+
+
+
+// in terminal
+python manage.py shell   #enter
+from home.models import Contact
+Contact.objects.all()    // we will get info about conctact save in models
+
+Contact.objects.filter(name="name")  // jab hamay multiple objects ka query set dhund na ho
+Contact.objects.filter(name="name", phone="9999999999")  //with phone or email etc
+
+
+changing phone number using model in terminal with the help of instance
+ins = Contact.objects.filter(name="name", phone"9999999999")[0]
+ins.phone = "000000000"
+ins.save()
+
+
+
+
+Contact.objects.all()                // find out all object in model
+Contact.objects.all().first() 	     // find out first object in model
+Contact.objects.all().last
+
+
+---------------------------------------------------------------------------------------
+student= Student(name="Hussain", age=25, email="muhammadhussain175155@gmail.com", address="Karachi",)
+student.save
+
+if we dont want to type student.save!! then,
+
+student = Student.objects.create(name="tauseen", age=22, email="tauseen@gmail.com", address="lahore")
+
+
+enctype="multipart/form-data"   if we want to take imgae or file from front end to back end
+{% csrf_token %} imp to type in form
